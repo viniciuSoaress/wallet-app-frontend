@@ -19,13 +19,16 @@
                         Insira seu nome e seu e-mail para ter acesso ao Wallet app e gerenciar suas finaçãs.
                     </p>
 
-                    <label class="mt" for="input-name">Nome</label>
-                    <input class="mt-smaller" type="text" name="input-name" id="input-name" placeholder="Insira seu nome">
+                    <form id="form-register" class="mt">
+                        <label class="mt" for="input-name">Nome</label>
+                    <input class="mt-smaller" type="text" name="input-name" id="input-name" placeholder="Insira seu nome" required>
                     
                     <label class="mt" for="input-email">E-mail</label>
-                    <input class="mt-smaller" type="email" name="input-email" id="input-email" placeholder="email@exempo.com">
+                    <input class="mt-smaller" type="email" name="input-email" id="input-email" placeholder="email@exempo.com" required>
 
-                    <button class="full-width mt ">Cadastrar</button>
+                    <button type="submit" class="full-width mt ">Cadastrar</button>
+                    </form>
+                    
                     <a href="../../../index.html" class="mt-larger">Ja tem conta? faça login aqui.</a>
                     
                 </div>
@@ -33,6 +36,6 @@
 
         </div>
 
-        <!-- <script src="./index.js"></script> -->
+        <script src="./index.js"></script>
     </body>
 </html>
