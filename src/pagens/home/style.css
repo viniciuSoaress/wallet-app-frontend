@@ -101,6 +101,9 @@ a {
 table {
     width: 100%;
 }
+tr{
+    height: 32px;
+}
 
 th {
     text-align: left;

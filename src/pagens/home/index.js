@@ -1,6 +1,39 @@
 const renderFinacesList = (data) => {
     const table = document.getElementById('finaces-table');
-    table.innerHTML = ''
+    table.innerHTML = '';
+
+    const tableHeader = document.createElement('tr');
+
+
+    const titleText = document.createTextNode('Titulo');
+    const titleElement = document.createElement('th');
+    titleElement.appendChild(titleText);
+    tableHeader.appendChild(titleElement);
+
+    const categoText = document.createTextNode('Categoria');
+    const categoElement = document.createElement('th');
+    categoElement.appendChild(categoText);
+    tableHeader.appendChild(categoElement);
+
+    const dateText = document.createTextNode('Data');
+    const dateElement = document.createElement('th');
+    dateElement.className = 'center'
+    dateElement.appendChild(dateText);
+    tableHeader.appendChild(dateElement);
+
+    const valuerText = document.createTextNode('Valor');
+    const valuerElement = document.createElement('th');
+    valuerElement.className = 'center'
+    valuerElement.appendChild(valuerText);
+    tableHeader.appendChild(valuerElement);
+
+    const actionText = document.createTextNode('Ação');
+    const actionElement = document.createElement('th');
+    actionElement.className = 'right'
+    actionElement.appendChild(actionText);
+    tableHeader.appendChild(actionElement);
+
+    table.appendChild(tableHeader)
 
     data.map((item) => {
         const tableRow = document.createElement('tr');
