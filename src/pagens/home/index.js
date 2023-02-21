@@ -154,7 +154,7 @@ const renderFinacesElements = (data) => {
     const financeCard3 = document.getElementById('finace-card-3');
     financeCard3.innerHTML = '';
 
-    const expensesSubtext = document.createTextNode('Total de lançamentos');
+    const expensesSubtext = document.createTextNode('Despesas');
     const expensesSubtextElement = document.createElement('h3');
     expensesSubtextElement.appendChild(expensesSubtext);
     financeCard3.appendChild(expensesSubtextElement)
@@ -176,7 +176,7 @@ const renderFinacesElements = (data) => {
     financeCard4.innerHTML = '';
 
 
-    const balancetextSub = document.createTextNode('Total de lançamentos');
+    const balancetextSub = document.createTextNode('Balanço');
     const balancetextSubElement = document.createElement('h3');
     balancetextSubElement.appendChild(balancetextSub);
     financeCard4.appendChild(balancetextSubElement)
