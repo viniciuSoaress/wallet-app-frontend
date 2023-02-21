@@ -1,3 +1,9 @@
+const onlogout = () =>{
+    localStorage.clear();
+    window.open('../../../index.html', '_self')
+}
+
+
 const onDeleteItem = async (id) => {
     try {
         const email = localStorage.getItem('@WalletApp:userEmail');
@@ -192,9 +198,11 @@ const renderFinacesElements = (data) => {
 const onLoadFinacessData = async () => {
 
     try {
-        const date = '2022-12-15';
+        const dateInputValue = document.getElementById('select-date').value;
+
+        
         const email = localStorage.getItem('@WalletApp:userEmail');
-        const result = await fetch(`https://mp-wallet-app-api.herokuapp.com/finances?date=${date}`, {
+        const result = await fetch(`https://mp-wallet-app-api.herokuapp.com/finances?date=${dateInputValue}`, {
             method: 'GET',
             headers: {
                 email: email,
@@ -227,6 +235,7 @@ const onLoadUserInfo = () => {
     navbarUserInfo.appendChild(emailElement);
 
     const logoutElement = document.createElement('a');
+    logoutElement.onclick = () => onlogout()
     const logoutText = document.createTextNode('Sair');
     logoutElement.appendChild(logoutText);
 
@@ -320,8 +329,19 @@ const onCreateFinaceRelase = async (target) => {
     }
 }
 
+const setInitialDate = () => {
+    const dateInput = document.getElementById('select-date');
+    const nowDate = new Date().toISOString().split('T')[0];
+    dateInput.value = nowDate;
+    dateInput.addEventListener('change', () =>{
+        onLoadFinacessData();
+    })
+}
+
+
 window.onload = () => {
     const email = localStorage.getItem('@WalletApp:userEmail');
+    setInitialDate()
     onLoadUserInfo()
     onLoadFinacessData()
     onLoadCategories()
