@@ -1,4 +1,4 @@
-.home-content-conteiner{
+.home-content-conteiner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -8,7 +8,7 @@
     background: #f4f4f9;
 }
 
-.navbar{
+.navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,12 +19,12 @@
     padding: 24px 122px;
 }
 
-.logo-navbar{
+.logo-navbar {
     height: 24px;
     width: auto;
 }
 
-.navbar-user-conteiner{
+.navbar-user-conteiner {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -33,7 +33,7 @@
     height: 100%;
 }
 
-.navbar-user-avatar{
+.navbar-user-avatar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,10 +42,12 @@
     border-radius: 50%;
     background: #e4fde1;
 }
-a{
+
+a {
     cursor: pointer;
 }
-.finace-card-conteiner{
+
+.finace-card-conteiner {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,7 +56,7 @@ a{
     padding: 48px 122px;
 }
 
-.finace-card{
+.finace-card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +68,7 @@ a{
 
 }
 
-.table-conteiner{
+.table-conteiner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -75,7 +77,7 @@ a{
     padding: 48px 122px;
 }
 
-.table-content-conteiner{
+.table-content-conteiner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -87,7 +89,7 @@ a{
     padding: 24px;
 }
 
-.table-content-header{
+.table-content-header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -96,31 +98,60 @@ a{
     padding-bottom: 24px;
 }
 
-table{
+table {
     width: 100%;
 }
 
-th{
+th {
     text-align: left;
     color: #7c7c7c;
 }
 
-td{
+td {
     color: #7c7c7c;
 }
-th.right{
+
+th.right {
     text-align: right;
 }
 
-th.center{
+th.center {
     text-align: center;
 }
 
-td.center{
+td.center {
     text-align: center;
 }
 
-td.right{
+td.right {
     text-align: right;
 }
-    
+
+.modal-backgroud {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: o;
+    bottom: 0;
+    background: rgba(1, 4, 0, 0.2);
+}
+
+.modal-content {
+    height: 100%;
+    width: 480px;
+    background: #f4f4f9;
+    padding: 24px;
+}
+
+.modal-content-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
