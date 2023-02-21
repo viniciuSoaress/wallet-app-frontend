@@ -4,8 +4,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     width: 100vw;
-    height: 100vh;
-    min-height: 100%;
+    height: auto;
+    min-height: 100vh;
     background: #f4f4f9;
 }
 
@@ -288,5 +288,8 @@ td.right {
     }
     h3{
         text-align: center;
+    }
+    .modal-content{
+        width: 350px;
     }
 }
