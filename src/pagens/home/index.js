@@ -1,3 +1,19 @@
+const onDeleteItem = async (id) => {
+    try {
+        const email = localStorage.getItem('@WalletApp:userEmail');
+        await fetch(`https://mp-wallet-app-api.herokuapp.com/finances/${id}`, {
+            method: 'DELETE',
+            headers: {
+                email: email,
+            },
+        })
+        onLoadFinacessData();
+    } catch (error) {
+        alert('error ao deletar item.')
+    }
+}
+
+
 const renderFinacesList = (data) => {
     const table = document.getElementById('finaces-table');
     table.innerHTML = '';
@@ -67,6 +83,8 @@ const renderFinacesList = (data) => {
         tableRow.appendChild(valueTd);
 
         const deleteTd = document.createElement('td');
+        deleteTd.onclick = () => onDeleteItem(item.id);
+        deleteTd.style.cursor = 'pointer'
         deleteTd.classList = 'right'
         const deleteText = document.createTextNode('Deletar');
         deleteTd.appendChild(deleteText);
@@ -96,7 +114,7 @@ const renderFinacesElements = (data) => {
     const totalSubtext = document.createTextNode('Total de lançamentos');
     const totalSubtextElement = document.createElement('h3');
     totalSubtextElement.appendChild(totalSubtext);
-    financeCard1.appendChild(totalSubtextElement )
+    financeCard1.appendChild(totalSubtextElement)
 
     const totalText = document.createTextNode(totalItems);
     const totalTextElement = document.createElement('h1');
@@ -112,7 +130,7 @@ const renderFinacesElements = (data) => {
     const revenueSubtext = document.createTextNode('Receitas');
     const revenueSubtextElement = document.createElement('h3');
     revenueSubtextElement.appendChild(revenueSubtext);
-    financeCard2.appendChild(revenueSubtextElement )
+    financeCard2.appendChild(revenueSubtextElement)
 
     const revenueText = document.createTextNode(
         new Intl.NumberFormat('pt-br', {
@@ -133,7 +151,7 @@ const renderFinacesElements = (data) => {
     const expensesSubtext = document.createTextNode('Total de lançamentos');
     const expensesSubtextElement = document.createElement('h3');
     expensesSubtextElement.appendChild(expensesSubtext);
-    financeCard3.appendChild(expensesSubtextElement )
+    financeCard3.appendChild(expensesSubtextElement)
 
     const expenceText = document.createTextNode(
         new Intl.NumberFormat('pt-br', {
@@ -155,7 +173,7 @@ const renderFinacesElements = (data) => {
     const balancetextSub = document.createTextNode('Total de lançamentos');
     const balancetextSubElement = document.createElement('h3');
     balancetextSubElement.appendChild(balancetextSub);
-    financeCard4.appendChild(balancetextSubElement )
+    financeCard4.appendChild(balancetextSubElement)
 
     const balanceText = document.createTextNode(
         new Intl.NumberFormat('pt-br', {
