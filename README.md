@@ -1,5 +1,7 @@
 # Wallet App
 
+<img src= "https://github.com/viniciuSoaress/wallet-app-frontend/blob/main/src/imgs/screenshot.png" alt="Wallet app preview" width="auto" heigth="500">
+
 ## Introduction - introdução
 
 This is an finances management dashboard made with JavaScript, HTML, CSS. The main objective is the user add and delete finances releases (that are save in the api), add inform him the balance of the month.
