@@ -157,3 +157,9 @@ select{
     height: 100%;
     padding: 24px;
 }
+
+@media only screen and (max-width: 500px){
+    .auto-content{
+        width: 390px;
+    }
+}
